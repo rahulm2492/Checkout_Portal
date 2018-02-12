@@ -23,7 +23,7 @@ class LoginForm extends React.Component {
 
  setData(e){
    if(e.target.getAttribute('name')==='custName'){
-     this.setState({name:e.target.value})
+     this.setState({name:(e.target.value).toLowerCase()})
    } else if(e.target.getAttribute('name')==='custMail') {
     this.setState({email:e.target.value})
    } else if(e.target.getAttribute('name')==='custNumber') {

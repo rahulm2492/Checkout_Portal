@@ -23,7 +23,8 @@ import {roundTo} from '../utils'; // helper function
 
         //publish Total
         this.originalTotal = roundTo(unit*price);
-        
+        this.discountedTotal = 0;
+        this.newQty = 0;
       
         if(discount){
 
