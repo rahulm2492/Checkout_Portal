@@ -1,0 +1,14 @@
+var reducer2 = function(state={},action){return {state2:state}}
+
+var combReducer = function(reducers){
+
+   return (state,action)=> {
+   
+   return reducers.reduce((newState,reducer)=> 
+ {return newState = {...newState,...reducer(state,action)}},{})
+   
+   }
+
+}
+
+console.log(combReducer([reducer1,reducer2]));
